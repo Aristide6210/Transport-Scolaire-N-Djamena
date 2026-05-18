@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction - Transport Scolaire</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; background: #f4f4f4; }
+        h1 { background: #2c3e50; color: white; padding: 15px; margin: 0; text-align: center; }
+        .container { max-width: 500px; margin: 40px auto; background: white; padding: 30px; border-radius: 10px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; color: #2c3e50; }
+        input { width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 5px; font-size: 15px; box-sizing: border-box; }
+        button { width: 100%; padding: 12px; background: #2c3e50; color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; }
+        button:hover { background: #34495e; }
+        .resultat { margin-top: 25px; padding: 20px; border-radius: 10px; text-align: center; }
+        .oui { background: #d5f5e3; border-left: 5px solid #27ae60; color: #1e8449; }
+        .non { background: #fadbd8; border-left: 5px solid #e74c3c; color: #c0392b; }
+        .retour { display: block; text-align: center; margin-top: 20px; color: #2c3e50; }
+    </style>
+</head>
+<body>
+    <h1>Prediction IA - Utilisation du Bus</h1>
+    <div class="container">
+        <h2>Entrer les informations</h2>
+        <form method="POST">
+            <label>Distance domicile-ecole (km)</label>
+            <input type="number" name="distance" step="0.1" min="0" placeholder="ex: 5" required>
+            <label>Heure de depart</label>
+            <input type="time" name="heure" required>
+            <button type="submit">Predire</button>
+        </form>
+        {% if resultat %}
+        <div class="resultat {{ 'oui' if 'BUS' in resultat else 'non' }}">
+            <h3>{{ resultat }}</h3>
+            <p>{{ conseil }}</p>
+        </div>
+        {% endif %}
+        <a class="retour" href="/">Retour a l'accueil</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+eleve,quartier,latitude,longitude,distance_km,heure,utilise_bus
+Ali,Diguel,12.134,15.055,5,07:00,1
+Moussa,Farcha,12.120,15.040,2,08:00,0
+Aristide,Walia,12.150,15.080,7,07:30,1
+Amina,Gassi,12.160,15.060,4,06:45,1
+Nguetolabaye,Chagoua,12.170,15.070,3,07:15,1
+Mahamat,Moursal,12.180,15.050,5,08:00,0
+Ngueramadje,Paris Congo,12.110,15.020,8,06:30,1
+Adoumadje,Kabalaye,12.120,15.003,8,07:20,0
+Oumar,Ndjari,12.155,15.090,3,07:19,1
+Domian,Koundoul,12.103,15.023,4,07:20,1
